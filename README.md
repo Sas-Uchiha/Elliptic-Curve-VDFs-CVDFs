@@ -1,2 +1,2 @@
-# Elliptic-Curve-VDFs-CVDFs
+# Anonymous: Elliptic-Curve-VDFs-CVDFs
 VDFs and CVDFs implementation using Elliptic Curve
