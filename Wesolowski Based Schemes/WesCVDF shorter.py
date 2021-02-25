@@ -1,3 +1,4 @@
+'''Input: Command Line Inputs: T, the delay parameter followed by t: time upto which the cVDF needs to be calculated'''
 import WesProver as wes
 import EC as elliptic_curve
 import sys
