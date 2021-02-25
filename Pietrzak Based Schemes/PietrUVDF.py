@@ -1,3 +1,4 @@
+'''Input: Command Line Inputs: T, the delay parameter'''
 import Pietr as pietr
 import EC as elliptic_curve
 import sys
