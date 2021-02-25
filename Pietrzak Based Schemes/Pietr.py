@@ -1,4 +1,4 @@
-'''Input: Command Line Inputs: T, the delay parameter followed by x: unhashedx-coordinate of the starting point '''
+'''Input: Command Line Inputs: T, the delay parameter followed by x: unhashed x-coordinate of the starting point '''
 
 import EC as elliptic_curve
 import sys
