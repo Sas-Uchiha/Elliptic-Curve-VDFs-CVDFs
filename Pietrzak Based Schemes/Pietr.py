@@ -1,3 +1,5 @@
+'''Input: Command Line Inputs: T, the delay parameter followed by x: unhashedx-coordinate of the starting point '''
+
 import EC as elliptic_curve
 import sys
 from hashlib import sha256
