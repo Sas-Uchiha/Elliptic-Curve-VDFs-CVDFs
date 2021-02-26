@@ -58,8 +58,8 @@ if __name__ == "__main__":
     print(h)
 #     start = time.time()
     #verification start here
-    proof = verify(T, curve, starting_point, h)
+    verified = verify(T, curve, starting_point, h)
 #     end = time.time()
 #     print(f"verification time: {round((end - start)*1000,2)}")
     #verification stop here subtract proof time.
-#     print(proof)
+    print(verified)
