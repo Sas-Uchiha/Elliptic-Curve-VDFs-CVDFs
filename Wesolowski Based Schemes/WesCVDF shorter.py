@@ -1,4 +1,6 @@
 '''Input: Command Line Inputs: T, the delay parameter followed by t: time upto which the cVDF needs to be calculated'''
+'''Dependencies: EC.py, WesProver.py, WesUVDF.py''' 
+
 import WesProver as wes
 import EC as elliptic_curve
 import sys
@@ -29,7 +31,6 @@ def eval(curve, x):
         start = time.time()
         proof = (wes.optimised_power(i * power, x, curve, l, sequence), l, i * power)
         end = time.time()
-        print(end- start)
         proof_time += end -start
     x = curve.multiply_point_by_2T(t % power, x)
     return (x, proof, proof_time)
@@ -39,9 +40,9 @@ def verify(curve, h, g, proof, t):
         return False
     if proof[0] == (-1, -1):
         return False
-    time = proof[2]
+    delay = proof[2]
     l = proof[1]
-    r = pow(2, time, l)
+    r = pow(2, delay, l)
     proof_till_multiple_of_kb = curve.addition(curve.multiply_point_by_k(l, proof[0]), curve.multiply_point_by_k(r, g))
     return curve.multiply_point_by_2T(t % power, proof_till_multiple_of_kb) == h
 
