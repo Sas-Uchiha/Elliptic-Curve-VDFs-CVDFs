@@ -130,10 +130,10 @@ if __name__ == "__main__":
         status = status & verify(curve, node)
         counter += k ** node.level
 #     end = time.time()
-    print(tree[0].level)
+#     print(tree[0].level)
 #     print(f"verification: {round((end-start) * 1000,2)}")
     print(status and counter == t)
-    print(pietr.proof_time)
+#     print(pietr.proof_time)
         
     
     
