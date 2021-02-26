@@ -1,4 +1,5 @@
 '''Input: Command Line Inputs: T, the delay parameter'''
+'''Dependencies: EC.py, WesProver.py'''
 
 import WesProver as wes
 import EC as elliptic_curve
