@@ -1,4 +1,5 @@
 '''Input: Command Line Inputs: T, the delay parameter followed by x: unhashed x-coordinate of the starting point '''
+'''Dependencies: EC.py'''
 import EC as elliptic_curve
 import sys
 from hashlib import sha256
@@ -81,14 +82,14 @@ def verify(T, curve, g, h, sequence):
     #proof time prover stop here
     #proof time verifier start here
     r = pow(2, T, l)
-    start = time.time()
+#     start = time.time()
     final_point = curve.addition(curve.multiply_point_by_k(l, pi), curve.multiply_point_by_k(r, g))
     if h == final_point:
         b = True
     else:
         b = False
-    end = time.time()
-    print(f"verification time: {round((end - start) * 1000,2)}")
+#     end = time.time()
+#     print(f"verification time: {round((end - start) * 1000,2)}")
     #proof time verifier stop here
     return b
 
