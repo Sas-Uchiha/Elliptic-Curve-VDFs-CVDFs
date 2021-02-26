@@ -1,6 +1,6 @@
+'''No Dependencies'''
 import hashlib
 from random import SystemRandom, randint
-import time
 
 class EllipticCurve:
 
