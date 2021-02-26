@@ -74,7 +74,7 @@ def verify(T, curve, g, h, sequence):
     #proof time prover start here
     
     l = elliptic_curve.generate_prime_number_below_bits(133)
-    print("Size = " + str(sys.getsizeof(l)))
+#     print("Size = " + str(sys.getsizeof(l)))
 #    start = time.time()
     pi = optimised_power(T, g, curve, l, sequence)
 #    end = time.time()
