@@ -56,18 +56,18 @@ if __name__ == "__main__":
     while math.gcd(x0 - 1, curve.curve_params_prime) != 1:
         x0 = generate()
     x = curve.curve_point(x0)
-    start = time.time()
+#     start = time.time()
     (h, proof, time1) = eval(curve, x)
-    end = time.time()
-    print(f"Proof Time: {round(time1 * 1000,2)}")
-    print(f"Eval Time: {round((end - start - time1) * 1000,2)}")
-    print(f"Proof Size: {sys.getsizeof(proof)}")
+#     end = time.time()
+#     print(f"Proof Time: {round(time1 * 1000,2)}")
+#     print(f"Eval Time: {round((end - start - time1) * 1000,2)}")
+#     print(f"Proof Size: {sys.getsizeof(proof)}")
     print(h)
     if not h == (-1, -1):
         start = time.time()
         b = verify(curve, h, x, proof, t)
         end = time.time()
-        print(f"Verify Time: {round((end - start) * 1000,2)}")
+#         print(f"Verify Time: {round((end - start) * 1000,2)}")
         print(b)
     
     
