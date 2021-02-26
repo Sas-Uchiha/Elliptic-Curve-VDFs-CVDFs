@@ -1,4 +1,5 @@
 '''Input: Command Line Inputs: T, the delay parameter followed by t: time upto which the cVDF needs to be calculated'''
+'''Dependencies: EC.py, Pietr.py, PietrUVDF.py'''
 import Pietr as pietr
 import EC as elliptic_curve
 import sys
@@ -113,24 +114,24 @@ if __name__ == "__main__":
     x = curve.curve_point(x0)
     if x == (-1,-1):
         sys.exit()
-    start = time.time()
+#     start = time.time()
     for i in range(n - 1, -1, -1):
         for j in range(time_in_base_k[i]):
             node = eval(curve, x, n - i- 1)
             x = node.final_point
             tree.append(node)
     
-    end = time.time()
-    print(f"evaluation: {round((end-start) * 1000,2)}")
+#     end = time.time()
+#     print(f"evaluation: {round((end-start) * 1000,2)}")
     status = True
     counter = 0
-    start = time.time()
+#     start = time.time()
     for node in tree:
         status = status & verify(curve, node)
         counter += k ** node.level
-    end = time.time()
+#     end = time.time()
     print(tree[0].level)
-    print(f"verification: {round((end-start) * 1000,2)}")
+#     print(f"verification: {round((end-start) * 1000,2)}")
     print(status and counter == t)
     print(pietr.proof_time)
         
