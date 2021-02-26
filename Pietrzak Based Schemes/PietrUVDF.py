@@ -1,4 +1,5 @@
 '''Input: Command Line Inputs: T, the delay parameter'''
+'''Dependencies: EC.py, Pietr.py'''
 import Pietr as pietr
 import EC as elliptic_curve
 import sys
